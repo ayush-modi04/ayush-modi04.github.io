@@ -1,0 +1,331 @@
+*{
+    font-family: 'Courier New', Courier, monospace;
+    font-weight: bold;
+}
+body {
+    margin: 0;
+    background: black;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+#space-background {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    background: url('images/space-bg.jpg') no-repeat center center/cover;
+    z-index: -1;
+}
+
+html{
+    scroll-behavior: smooth;
+}
+.navigation {
+    position: fixed;
+    height: 10vh;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 10;
+}
+.logo {
+    height: 100%;
+    width: 35%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    border-radius: 50%;
+    margin-left: 2vw;
+}
+.logo .image{
+    height: 8vh;
+    width: 8vh;
+    background: url('images/Ayush.jpg') no-repeat center center/cover;
+    border-radius: 50%;
+}
+.logo p{
+    margin-left: 15px;
+}
+.navigation ul {
+    list-style-type: none;
+    display: flex;
+    justify-content: space-evenly;
+    width: 100%;
+    padding: 0;
+    margin: 0;
+}
+ul{
+    width: 65%;
+}
+ul li {
+    height: 6vh;
+    width: auto;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+}
+ul li a {
+    text-decoration: none;
+    color: white;
+    font-size: 2.5vh;
+    padding: 10px;
+    border-radius: 5px;
+}
+ul li a:hover {
+    background-color: rgba(255, 255, 255, 0.2);
+    font-size: 2.7vh;
+    transition: 0.4s ease-in-out;
+}
+
+.hero {
+    height: 100vh;
+    width: 80%;
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+    justify-content: space-evenly;
+}
+.hero .container{
+    height: 40vh;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+}
+.text{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    height: auto;
+    width: 70%;
+}
+.image{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    height: 45vh;
+    width: 30%;
+}
+.dp{
+    height: 24vw;
+    width: 24vw;
+    background: url('images/Ayush.jpg') no-repeat center center/cover;
+    border-radius: 50%;
+}
+h1{
+    font-size: 8vh;
+    margin: 0;
+}
+p{
+    font-size: 2.6vh;
+}
+.btn {
+    text-decoration: none;
+    color: white;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    text-align: center;
+    font-size: 2.5vh;
+    padding: 10px;
+    border-radius: 5px;
+    width: 15vw;
+    height: 4vh;
+}
+.btn:hover {
+    background-color: rgba(255, 255, 255, 0.5);
+    font-size: 2.7vh;
+    transition: 0.4s ease-in-out;
+}
+.skills{
+    height: 80vh;
+    width: 80%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+}
+.skills-container{
+    height: 80%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+}   
+h2{
+    font-size: 5vh;
+    margin: 0;
+}
+.skills-list{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    align-items: center;
+}
+.skill{
+    margin: 5vh;
+    font-size: 3.5vh;
+    height: auto;
+    width: 24vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.projects{
+    height: 90vh;
+    width: 80%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+}
+
+.contact{
+    height: 90vh;
+    width: 80%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+}
+#contactForm {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+}
+input, textarea{
+    height: 5vh;
+    width: 40vw;
+    font-size: 2.5vh;
+    margin: 2vh;
+    padding: 5px;
+    border-radius: 10px;
+}
+button{
+    height: 5vh;
+    width: 10vw;
+    font-size: 2.5vh;
+    margin: 2vh;
+    padding: 5px;
+    border-radius: 10px;
+    background-color: black;
+    color: white;
+    border: 1px solid white;
+    cursor: pointer;
+}
+button:hover{
+    background-color: white;
+    color: black;
+    font-size: 2.7vh;
+    transition: 0.4s ease-in-out;
+}
+
+.certificates{
+    height: 90vh;
+    width: 80%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+}
+.certificate-container{
+    display: flex;
+}
+.panel{
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 80vh;
+    border-radius: 50px;
+    cursor: pointer;
+    flex: 0.5;
+    margin: 10px;
+    position: relative;
+    transition: flex 0.7s ease-in;
+}
+.panel h3{
+    font-size: 24px;
+    position: absolute;
+    bottom: 20px;
+    left: 20px;
+    margin: 0;
+    opacity: 0;
+}
+.panel.active{
+    flex: 5;
+}
+.panel.active h3{
+    opacity: 1
+}
+@media(max-width: 480px){
+    .container{
+        width: 100vw;
+    }
+    .panel:nth-of-type(4),
+    .panel:nth-of-type(5){
+        display: none;
+    }
+}
+
+.bottom{
+    height: 40vh;
+    width: 80%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+}
+.bottom .contact-container{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    height: 80%;
+    width: 50%;
+}
+.card{
+    height: auto;
+    width: 80%;
+    text-align: left;
+    font-size: 2.5vh;
+}
+
+footer p{
+    font-size: 1.5vh;
+    padding: 10px;
+}
+@media(max-width: 768px){
+    .navigation {
+        flex-direction: column;
+        height: auto;
+        padding: 10px;
+    }
+    .navigation ul {
+        width: 100%;
+        flex-direction: column;
+        align-items: center;
+    }
+    ul li {
+        width: 100%;
+        text-align: center;
+    }
+    .hero .container {
+        flex-direction: column;
+        align-items: center;
+    }
+    .text, .image {
+        width: 100%;
+        text-align: center;
+    }
+    .dp{
+        height: 40vw;
+        width: 40vw;
+    }
+    .bottom{
+        flex-direction: column;
+        align-items: center;
+    }
+    .contact-container{
+        width: 100%;
+    }
+}
